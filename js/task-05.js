@@ -1,11 +1,6 @@
-const inputTexto = document.querySelector("#name-input");
-const outputTexto = document.querySelector("#name-output");
-inputTexto.addEventListener("input", writeSpan);
+const input = document.querySelector('#name-input');
+const output = document.querySelector('#name-output');
 
-function writeSpan() {
-    if (inputTexto.value == "") {
-        outputTexto.textContent = "anónimo";
-    } else {
-        outputTexto.textContent = inputTexto.value;
-    }
-}
+input.addEventListener('input', (event) => {
+    output.textContent = event.target.value || 'Anonymous';
+});
